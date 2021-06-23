@@ -1,0 +1,323 @@
+        -:    0:Source:main_test.cpp
+        -:    0:Graph:main_test.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    1:#include <gtest/gtest.h>
+        -:    2:
+        -:    3:#include "F16.h"
+        -:    4:
+    #####:    5:TEST(BoolMatrixTest, Multiply1) {
+    #####:    6:  std::vector<std::vector<bool>> vec1 = {{0, 1, 0}, {0, 0, 1}, {1, 0, 0}};
+    #####:    7:  std::vector<std::vector<bool>> vec2 = {{1, 1, 1}, {0, 1, 0}, {1, 0, 0}};
+    #####:    8:  std::vector<std::vector<bool>> vec3 = {{0, 1, 0}, {1, 0, 0}, {1, 1, 1}};
+    #####:    9:  BoolMatrix BM1(vec1);
+    #####:   10:  BoolMatrix BM2(vec2);
+    #####:   11:  BoolMatrix BM3(vec3);
+    #####:   12:  BoolMatrix BM4 = BM1 * BM2;
+    #####:   13:  EXPECT_EQ(BM4, BM3);
+    #####:   14:  EXPECT_TRUE(true);
+    #####:   15:}
+------------------
+_ZN29BoolMatrixTest_Multiply1_Test8TestBodyEv:
+    #####:    5:TEST(BoolMatrixTest, Multiply1) {
+    #####:    6:  std::vector<std::vector<bool>> vec1 = {{0, 1, 0}, {0, 0, 1}, {1, 0, 0}};
+    #####:    7:  std::vector<std::vector<bool>> vec2 = {{1, 1, 1}, {0, 1, 0}, {1, 0, 0}};
+    #####:    8:  std::vector<std::vector<bool>> vec3 = {{0, 1, 0}, {1, 0, 0}, {1, 1, 1}};
+    #####:    9:  BoolMatrix BM1(vec1);
+    #####:   10:  BoolMatrix BM2(vec2);
+    #####:   11:  BoolMatrix BM3(vec3);
+    #####:   12:  BoolMatrix BM4 = BM1 * BM2;
+    #####:   13:  EXPECT_EQ(BM4, BM3);
+    #####:   14:  EXPECT_TRUE(true);
+    #####:   15:}
+------------------
+_ZN29BoolMatrixTest_Multiply1_TestC2Ev:
+    #####:    5:TEST(BoolMatrixTest, Multiply1) {
+------------------
+        -:   16:
+    #####:   17:TEST(BoolMatrixTest, Multiply2) {
+    #####:   18:  BoolMatrix BM1(2);
+    #####:   19:  BoolMatrix BM2(2);
+    #####:   20:  BoolMatrix BM3(2);
+    #####:   21:  BM1.matrix[0][0] = 1;
+    #####:   22:  BM1.matrix[1][1] = 1;
+    #####:   23:  BM2.matrix[0][1] = 1;
+    #####:   24:  BM2.matrix[1][0] = 1;
+    #####:   25:  BM3.matrix[0][1] = 1;
+    #####:   26:  BM3.matrix[1][0] = 1;
+    #####:   27:  EXPECT_EQ(BM1 * BM2, BM3);
+    #####:   28:}
+------------------
+_ZN29BoolMatrixTest_Multiply2_Test8TestBodyEv:
+    #####:   17:TEST(BoolMatrixTest, Multiply2) {
+    #####:   18:  BoolMatrix BM1(2);
+    #####:   19:  BoolMatrix BM2(2);
+    #####:   20:  BoolMatrix BM3(2);
+    #####:   21:  BM1.matrix[0][0] = 1;
+    #####:   22:  BM1.matrix[1][1] = 1;
+    #####:   23:  BM2.matrix[0][1] = 1;
+    #####:   24:  BM2.matrix[1][0] = 1;
+    #####:   25:  BM3.matrix[0][1] = 1;
+    #####:   26:  BM3.matrix[1][0] = 1;
+    #####:   27:  EXPECT_EQ(BM1 * BM2, BM3);
+    #####:   28:}
+------------------
+_ZN29BoolMatrixTest_Multiply2_TestC2Ev:
+    #####:   17:TEST(BoolMatrixTest, Multiply2) {
+------------------
+        -:   29:
+    #####:   30:TEST(BoolMatrixTest, Addition) {
+    #####:   31:  std::vector<std::vector<bool>> vec1 = {{0, 1, 0}, {0, 0, 1}, {1, 0, 0}};
+    #####:   32:  std::vector<std::vector<bool>> vec2 = {{1, 1, 1}, {0, 1, 0}, {1, 0, 0}};
+    #####:   33:  std::vector<std::vector<bool>> vec3 = {{1, 1, 1}, {0, 1, 1}, {1, 0, 0}};
+    #####:   34:  BoolMatrix BM1(vec1);
+    #####:   35:  BoolMatrix BM2(vec2);
+    #####:   36:  BoolMatrix BM3(vec3);
+    #####:   37:  EXPECT_EQ(BM1 + BM2, BM3);
+    #####:   38:}
+------------------
+_ZN28BoolMatrixTest_Addition_Test8TestBodyEv:
+    #####:   30:TEST(BoolMatrixTest, Addition) {
+    #####:   31:  std::vector<std::vector<bool>> vec1 = {{0, 1, 0}, {0, 0, 1}, {1, 0, 0}};
+    #####:   32:  std::vector<std::vector<bool>> vec2 = {{1, 1, 1}, {0, 1, 0}, {1, 0, 0}};
+    #####:   33:  std::vector<std::vector<bool>> vec3 = {{1, 1, 1}, {0, 1, 1}, {1, 0, 0}};
+    #####:   34:  BoolMatrix BM1(vec1);
+    #####:   35:  BoolMatrix BM2(vec2);
+    #####:   36:  BoolMatrix BM3(vec3);
+    #####:   37:  EXPECT_EQ(BM1 + BM2, BM3);
+    #####:   38:}
+------------------
+_ZN28BoolMatrixTest_Addition_TestC2Ev:
+    #####:   30:TEST(BoolMatrixTest, Addition) {
+------------------
+        -:   39:
+    #####:   40:TEST(BoolMatrixTest, locking) {
+    #####:   41:  std::vector<std::vector<bool>> vec1 = {{0, 1, 0}, {0, 0, 1}, {1, 0, 0}};
+    #####:   42:  std::vector<std::vector<bool>> vec2 = {{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};
+    #####:   43:  BoolMatrix BM1(vec1);
+    #####:   44:  BoolMatrix BM2(vec2);
+    #####:   45:  EXPECT_EQ(BM1.locking(), BM2);
+    #####:   46:}
+------------------
+_ZN27BoolMatrixTest_locking_Test8TestBodyEv:
+    #####:   40:TEST(BoolMatrixTest, locking) {
+    #####:   41:  std::vector<std::vector<bool>> vec1 = {{0, 1, 0}, {0, 0, 1}, {1, 0, 0}};
+    #####:   42:  std::vector<std::vector<bool>> vec2 = {{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};
+    #####:   43:  BoolMatrix BM1(vec1);
+    #####:   44:  BoolMatrix BM2(vec2);
+    #####:   45:  EXPECT_EQ(BM1.locking(), BM2);
+    #####:   46:}
+------------------
+_ZN27BoolMatrixTest_locking_TestC2Ev:
+    #####:   40:TEST(BoolMatrixTest, locking) {
+------------------
+        -:   47:
+    #####:   48:TEST(DynamicStateTest, Constructor) {
+    #####:   49:  std::string s = "aba";
+    #####:   50:  char c = 'a';
+    #####:   51:  DynamicState DS1(c, s);
+        -:   52:  std::vector<std::vector<bool>> vec1 = {
+    #####:   53:      {1, 1, 0, 0}, {0, 1, 0, 0}, {0, 0, 1, 1}, {0, 0, 0, 1}};
+        -:   54:  std::vector<std::vector<bool>> vec2 = {
+    #####:   55:      {0, 1, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 1}, {0, 0, 0, 0}};
+    #####:   56:  BoolMatrix BM1(vec1);
+    #####:   57:  BoolMatrix BM2(vec2);
+    #####:   58:  EXPECT_EQ(DS1.GetWhole(), BM2);
+    #####:   59:  EXPECT_EQ(DS1.GetMiddle(), BM1);
+    #####:   60:  EXPECT_EQ(DS1.GetSuffix(), BM1);
+    #####:   61:  EXPECT_EQ(DS1.GetPrefix(), BM1);
+    #####:   62:}
+------------------
+_ZN33DynamicStateTest_Constructor_Test8TestBodyEv:
+    #####:   48:TEST(DynamicStateTest, Constructor) {
+    #####:   49:  std::string s = "aba";
+    #####:   50:  char c = 'a';
+    #####:   51:  DynamicState DS1(c, s);
+        -:   52:  std::vector<std::vector<bool>> vec1 = {
+    #####:   53:      {1, 1, 0, 0}, {0, 1, 0, 0}, {0, 0, 1, 1}, {0, 0, 0, 1}};
+        -:   54:  std::vector<std::vector<bool>> vec2 = {
+    #####:   55:      {0, 1, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 1}, {0, 0, 0, 0}};
+    #####:   56:  BoolMatrix BM1(vec1);
+    #####:   57:  BoolMatrix BM2(vec2);
+    #####:   58:  EXPECT_EQ(DS1.GetWhole(), BM2);
+    #####:   59:  EXPECT_EQ(DS1.GetMiddle(), BM1);
+    #####:   60:  EXPECT_EQ(DS1.GetSuffix(), BM1);
+    #####:   61:  EXPECT_EQ(DS1.GetPrefix(), BM1);
+    #####:   62:}
+------------------
+_ZN33DynamicStateTest_Constructor_TestC2Ev:
+    #####:   48:TEST(DynamicStateTest, Constructor) {
+------------------
+        -:   63:
+    #####:   64:TEST(DynamicStateTest, Multiply) {
+    #####:   65:  std::string s = "aba";
+    #####:   66:  char c = 'a';
+    #####:   67:  DynamicState DS1(c, s);
+    #####:   68:  c = 'b';
+    #####:   69:  DynamicState DS2(c, s);
+        -:   70:  std::vector<std::vector<bool>> VecWHole = {
+    #####:   71:      {0, 0, 1, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}};
+        -:   72:  std::vector<std::vector<bool>> VecSuffix = {
+    #####:   73:      {1, 0, 1, 0}, {0, 1, 1, 0}, {0, 0, 1, 0}, {0, 0, 0, 1}};
+        -:   74:  std::vector<std::vector<bool>> VecPrefix = {
+    #####:   75:      {1, 1, 1, 0}, {0, 1, 0, 0}, {0, 0, 1, 1}, {0, 0, 0, 1}};
+        -:   76:  std::vector<std::vector<bool>> VecMiddle = {
+    #####:   77:      {1, 1, 1, 0}, {0, 1, 1, 0}, {0, 0, 1, 1}, {0, 0, 0, 1}};
+    #####:   78:  BoolMatrix BM1(VecWHole);
+    #####:   79:  BoolMatrix BM2(VecSuffix);
+    #####:   80:  BoolMatrix BM3(VecPrefix);
+    #####:   81:  BoolMatrix BM4(VecMiddle);
+    #####:   82:  DynamicState DS = DS1 * DS2;
+    #####:   83:  EXPECT_EQ(DS.GetWhole(), BM1);
+    #####:   84:  EXPECT_EQ(DS.GetSuffix(), BM2);
+        -:   85:  // EXPECT_EQ(DS.GetPrefix(), BM3);
+        -:   86:  // EXPECT_EQ(DS.GetMiddle(), BM4);
+    #####:   87:}
+------------------
+_ZN30DynamicStateTest_Multiply_Test8TestBodyEv:
+    #####:   64:TEST(DynamicStateTest, Multiply) {
+    #####:   65:  std::string s = "aba";
+    #####:   66:  char c = 'a';
+    #####:   67:  DynamicState DS1(c, s);
+    #####:   68:  c = 'b';
+    #####:   69:  DynamicState DS2(c, s);
+        -:   70:  std::vector<std::vector<bool>> VecWHole = {
+    #####:   71:      {0, 0, 1, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}};
+        -:   72:  std::vector<std::vector<bool>> VecSuffix = {
+    #####:   73:      {1, 0, 1, 0}, {0, 1, 1, 0}, {0, 0, 1, 0}, {0, 0, 0, 1}};
+        -:   74:  std::vector<std::vector<bool>> VecPrefix = {
+    #####:   75:      {1, 1, 1, 0}, {0, 1, 0, 0}, {0, 0, 1, 1}, {0, 0, 0, 1}};
+        -:   76:  std::vector<std::vector<bool>> VecMiddle = {
+    #####:   77:      {1, 1, 1, 0}, {0, 1, 1, 0}, {0, 0, 1, 1}, {0, 0, 0, 1}};
+    #####:   78:  BoolMatrix BM1(VecWHole);
+    #####:   79:  BoolMatrix BM2(VecSuffix);
+    #####:   80:  BoolMatrix BM3(VecPrefix);
+    #####:   81:  BoolMatrix BM4(VecMiddle);
+    #####:   82:  DynamicState DS = DS1 * DS2;
+    #####:   83:  EXPECT_EQ(DS.GetWhole(), BM1);
+    #####:   84:  EXPECT_EQ(DS.GetSuffix(), BM2);
+        -:   85:  // EXPECT_EQ(DS.GetPrefix(), BM3);
+        -:   86:  // EXPECT_EQ(DS.GetMiddle(), BM4);
+    #####:   87:}
+------------------
+_ZN30DynamicStateTest_Multiply_TestC2Ev:
+    #####:   64:TEST(DynamicStateTest, Multiply) {
+------------------
+        -:   88:
+    #####:   89:TEST(DynamicStateTest, Addition) {
+    #####:   90:  std::string s = "aba";
+    #####:   91:  char c = 'a';
+    #####:   92:  DynamicState DS1(c, s);
+    #####:   93:  c = 'b';
+    #####:   94:  DynamicState DS2(c, s);
+        -:   95:  std::vector<std::vector<bool>> VecSufPrefMid = {
+    #####:   96:      {1, 1, 0, 0}, {0, 1, 1, 0}, {0, 0, 1, 1}, {0, 0, 0, 1}};
+        -:   97:  std::vector<std::vector<bool>> VecWHole = {
+    #####:   98:      {0, 1, 0, 0}, {0, 0, 1, 0}, {0, 0, 0, 1}, {0, 0, 0, 0}};
+    #####:   99:  BoolMatrix BM1(VecWHole);
+    #####:  100:  BoolMatrix BM2(VecSufPrefMid);
+    #####:  101:  BoolMatrix BM3(VecSufPrefMid);
+    #####:  102:  BoolMatrix BM4(VecSufPrefMid);
+    #####:  103:  DynamicState DS = DS1 + DS2;
+    #####:  104:  EXPECT_EQ(DS.GetWhole(), BM1);
+    #####:  105:  EXPECT_EQ(DS.GetMiddle(), BM2);
+    #####:  106:  EXPECT_EQ(DS.GetSuffix(), BM3);
+    #####:  107:  EXPECT_EQ(DS.GetPrefix(), BM4);
+    #####:  108:}
+------------------
+_ZN30DynamicStateTest_Addition_Test8TestBodyEv:
+    #####:   89:TEST(DynamicStateTest, Addition) {
+    #####:   90:  std::string s = "aba";
+    #####:   91:  char c = 'a';
+    #####:   92:  DynamicState DS1(c, s);
+    #####:   93:  c = 'b';
+    #####:   94:  DynamicState DS2(c, s);
+        -:   95:  std::vector<std::vector<bool>> VecSufPrefMid = {
+    #####:   96:      {1, 1, 0, 0}, {0, 1, 1, 0}, {0, 0, 1, 1}, {0, 0, 0, 1}};
+        -:   97:  std::vector<std::vector<bool>> VecWHole = {
+    #####:   98:      {0, 1, 0, 0}, {0, 0, 1, 0}, {0, 0, 0, 1}, {0, 0, 0, 0}};
+    #####:   99:  BoolMatrix BM1(VecWHole);
+    #####:  100:  BoolMatrix BM2(VecSufPrefMid);
+    #####:  101:  BoolMatrix BM3(VecSufPrefMid);
+    #####:  102:  BoolMatrix BM4(VecSufPrefMid);
+    #####:  103:  DynamicState DS = DS1 + DS2;
+    #####:  104:  EXPECT_EQ(DS.GetWhole(), BM1);
+    #####:  105:  EXPECT_EQ(DS.GetMiddle(), BM2);
+    #####:  106:  EXPECT_EQ(DS.GetSuffix(), BM3);
+    #####:  107:  EXPECT_EQ(DS.GetPrefix(), BM4);
+    #####:  108:}
+------------------
+_ZN30DynamicStateTest_Addition_TestC2Ev:
+    #####:   89:TEST(DynamicStateTest, Addition) {
+------------------
+        -:  109:
+    #####:  110:TEST(DynamicStateTest, Star) {
+    #####:  111:  std::string s = "aba";
+    #####:  112:  char c = 'a';
+    #####:  113:  DynamicState DS1(c, s);
+    #####:  114:  c = 'b';
+    #####:  115:  DynamicState DS2(c, s);
+        -:  116:  std::vector<std::vector<bool>> VecWHole = {
+    #####:  117:      {1, 0, 1, 0}, {0, 1, 0, 0}, {0, 0, 1, 0}, {0, 0, 0, 1}};
+        -:  118:  std::vector<std::vector<bool>> VecSuffix = {
+    #####:  119:      {1, 0, 1, 0}, {0, 1, 1, 0}, {0, 0, 1, 0}, {0, 0, 0, 1}};
+        -:  120:  std::vector<std::vector<bool>> VecPrefix = {
+    #####:  121:      {1, 1, 1, 1}, {0, 1, 0, 0}, {0, 0, 1, 1}, {0, 0, 0, 1}};
+        -:  122:  std::vector<std::vector<bool>> VecMiddle = {
+    #####:  123:      {1, 1, 1, 1}, {0, 1, 1, 1}, {0, 0, 1, 1}, {0, 0, 0, 1}};
+    #####:  124:  BoolMatrix BM1(VecWHole);
+    #####:  125:  BoolMatrix BM2(VecSuffix);
+    #####:  126:  BoolMatrix BM3(VecPrefix);
+    #####:  127:  BoolMatrix BM4(VecMiddle);
+    #####:  128:  DynamicState DS = DS1 * DS2;
+    #####:  129:  DS = DS.star();
+    #####:  130:  EXPECT_EQ(DS.GetWhole(), BM1);
+    #####:  131:  EXPECT_EQ(DS.GetSuffix(), BM2);
+    #####:  132:  EXPECT_EQ(DS.GetPrefix(), BM3);
+    #####:  133:  EXPECT_EQ(DS.GetMiddle(), BM4);
+    #####:  134:}
+------------------
+_ZN26DynamicStateTest_Star_Test8TestBodyEv:
+    #####:  110:TEST(DynamicStateTest, Star) {
+    #####:  111:  std::string s = "aba";
+    #####:  112:  char c = 'a';
+    #####:  113:  DynamicState DS1(c, s);
+    #####:  114:  c = 'b';
+    #####:  115:  DynamicState DS2(c, s);
+        -:  116:  std::vector<std::vector<bool>> VecWHole = {
+    #####:  117:      {1, 0, 1, 0}, {0, 1, 0, 0}, {0, 0, 1, 0}, {0, 0, 0, 1}};
+        -:  118:  std::vector<std::vector<bool>> VecSuffix = {
+    #####:  119:      {1, 0, 1, 0}, {0, 1, 1, 0}, {0, 0, 1, 0}, {0, 0, 0, 1}};
+        -:  120:  std::vector<std::vector<bool>> VecPrefix = {
+    #####:  121:      {1, 1, 1, 1}, {0, 1, 0, 0}, {0, 0, 1, 1}, {0, 0, 0, 1}};
+        -:  122:  std::vector<std::vector<bool>> VecMiddle = {
+    #####:  123:      {1, 1, 1, 1}, {0, 1, 1, 1}, {0, 0, 1, 1}, {0, 0, 0, 1}};
+    #####:  124:  BoolMatrix BM1(VecWHole);
+    #####:  125:  BoolMatrix BM2(VecSuffix);
+    #####:  126:  BoolMatrix BM3(VecPrefix);
+    #####:  127:  BoolMatrix BM4(VecMiddle);
+    #####:  128:  DynamicState DS = DS1 * DS2;
+    #####:  129:  DS = DS.star();
+    #####:  130:  EXPECT_EQ(DS.GetWhole(), BM1);
+    #####:  131:  EXPECT_EQ(DS.GetSuffix(), BM2);
+    #####:  132:  EXPECT_EQ(DS.GetPrefix(), BM3);
+    #####:  133:  EXPECT_EQ(DS.GetMiddle(), BM4);
+    #####:  134:}
+------------------
+_ZN26DynamicStateTest_Star_TestC2Ev:
+    #####:  110:TEST(DynamicStateTest, Star) {
+------------------
+        -:  135:
+    #####:  136:TEST(JustTest, IsTrue) { EXPECT_TRUE(true); }
+------------------
+_ZN20JustTest_IsTrue_Test8TestBodyEv:
+    #####:  136:TEST(JustTest, IsTrue) { EXPECT_TRUE(true); }
+------------------
+_ZN20JustTest_IsTrue_TestC2Ev:
+    #####:  136:TEST(JustTest, IsTrue) { EXPECT_TRUE(true); }
+------------------
+        -:  137:
+    #####:  138:int main(int argc, char** argv) {
+    #####:  139:  ::testing::InitGoogleTest(&argc, argv);
+    #####:  140:  return RUN_ALL_TESTS();
+        -:  141:}
